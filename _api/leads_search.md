@@ -4,8 +4,8 @@ position_number: 1.2
 type: get
 description: This endpoint allows you to search for leads in the Slintel Database.
 parameters:
-  - name: lead_titles
-    content: lead_titles (eg. cxo, manager, vp)
+  - name: titles
+    content: titles (eg. cxo, manager, vp)
   - name: company_websites
     content: domain of the company
   - name: location
@@ -27,7 +27,7 @@ left_code_blocks:
             'x-api-key': 'YOUR API KEY',
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify({"payload":{"lead_titles":["cxo","vp"],"company_websites":["amazon.com"],"location":["california","united stated"]},"page":1})
+          body: JSON.stringify({"payload":{"titles":["cxo","vp"],"company_websites":["amazon.com"],"location":["california","united stated"]},"page":1})
         };
         request(options, function (error, response) { 
           if (error) throw new Error(error);
@@ -45,7 +45,7 @@ left_code_blocks:
             "x-api-key": "YOUR API KEY",
             "Content-Type": "application/json"
           },
-          "data": JSON.stringify({"payload":{"lead_titles":["cxo","vp"],"company_websites":["amazon.com"],"location":["california","united stated"]},"page":1}),
+          "data": JSON.stringify({"payload":{"titles":["cxo","vp"],"company_websites":["amazon.com"],"location":["california","united stated"]},"page":1}),
         };
         
         $.ajax(settings).done(function (response) {
@@ -58,7 +58,7 @@ left_code_blocks:
 
         url = "https://apiv2.slintel.com/v2.0/lead/search"
         
-        payload = "{\"payload\":{\"lead_titles\":[\"cxo\",\"vp\"],\"company_websites\":[\"amazon.com\"],\"location\":[\"california\",\"united stated\"]},\"page\":1}"
+        payload = "{\"payload\":{\"titles\":[\"cxo\",\"vp\"],\"company_websites\":[\"amazon.com\"],\"location\":[\"california\",\"united stated\"]},\"page\":1}"
         headers = {
           'x-api-key': 'YOUR API KEY',
           'Content-Type': 'application/json'
@@ -73,7 +73,7 @@ right_code_blocks:
   - code_block: |2-
         {
           "payload": {
-            "lead_titles": [
+            "titles": [
               "cxo",
               "vp"
             ],
@@ -93,38 +93,15 @@ right_code_blocks:
         {
             "data": [
             {
-                "id": "5d525e606dd1791d7d215953",
-                "country": "United States",
+                "id": "607f5251efe2c7542c97661f",
                 "company_id": "5c3b000ad55ae49f1b75f1a3",
-                "city": "Seattle",
-                "lead_title": "Vp & Cto",
+                "email_confidence": "High",
+                "lead_title": "Vice President Ad Sales And Program Management",
                 "company_name": "Amazon",
                 "company_website": "amazon.com",
-                "name": "Werner Vogels",
-                "state": "Washington"
-            },
-            {
-                "id": "5dc13dde2038fe24d4a72dae",
-                "country": "United States",
-                "company_id": "5c3b000ad55ae49f1b75f1a3",
-                "city": "Los Angeles",
-                "lead_title": "Ceo",
-                "company_name": "Amazon",
-                "company_website": "amazon.com",
-                "name": "Vins Loo",
-                "state": "California",
-                "linkedin_url": "http://www.linkedin.com/in/vins-loo-667844109"
-            },
-            {
-                "id": "5ebb8d5da0e7595308ad1b2d",
-                "country": "United States",
-                "city": "Milpitas",
-                "lead_title": "Vice President",
-                "company_website": "amazon.com",
-                "company_name": "Amazon",
-                "name": "John Berklecamp",
-                "state": "California",
-                "linkedin_url": "http://www.linkedin.com/in/john-berklecamp-25bb6b78"
+                "name": "Steve Sarner",
+                "linkedin_url": "http://www.linkedin.com/in/stevesarner",
+                "email": "s*****r@amazon.com"
             }
         ],
         "total": 442
