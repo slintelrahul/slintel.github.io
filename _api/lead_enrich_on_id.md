@@ -4,8 +4,7 @@ position_number: 1.5
 type: get
 description: This endpoint enriches a lead’s information on Id.
 content_markdown: |-
-  The enrich endpoint charges credit for its usage. If a verified email is successfully returned, it will cost you 1 credit. 
-  If an email/phone is not found, but Slintel successfully found ALL of the following information, Slintel will charge a fraction of a credit.
+  The lead enrichment endpoint consumes credits for its usage - one credit is charged for every successful response returned.
   
   The enrich endpoint also charges credits if you pass in the same information multiple times.
   {: .warning }
