@@ -1,7 +1,7 @@
 ---
 title: Search Leads
 position_number: 1.2
-type: get
+type: post
 description: This endpoint allows you to search for leads in the Slintel Database.
 parameters:
   - name: titles
